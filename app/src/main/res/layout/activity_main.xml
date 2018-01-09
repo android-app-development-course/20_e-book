@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#333745"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:background="#333745"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/AppTheme.AppBarOverlay1"
+        app:theme="@style/MyCustomToolBarStyle">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:background="#333745"
+        android:layout_height="30dp"
+        android:layout_below="@+id/main_toolbar"
+        >
+
+        <!--layout_weight这个属性为权重，让两个textview平分这个linearLayout-->
+
+        <TextView
+            android:id="@+id/app_book"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/app_book"
+            android:textColor="#ffffff"
+            android:textSize="40px"
+            />
+
+        <TextView
+            android:id="@+id/app_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/app_discover"
+            android:textColor="#ffffff"
+            android:textSize="40px"
+           />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerVertical="true"
+        android:id="@+id/scrollbar"
+        android:scaleType="matrix"
+
+        android:src="@drawable/ic_do_not_disturb_on_black_24dp"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scrollbar"
+        android:background="#ffffff">
+
+
+    </android.support.v4.view.ViewPager>
+
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/LL4"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/boollogin"
+            android:textColor="#bdbdbd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="尚未登录，请登录!"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <include layout="@layout/content_main" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="31dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp" />
+
+
+
+
+</RelativeLayout>
